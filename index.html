@@ -1,14 +1,646 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./build/tailwind.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+    <nav>
+        <div class="header layout-container py-3 flex items-center justify-between" id="header">
+            <div>
+                <a href="#!">
+                    <img src="./img/Logo-1.png" alt="">
+                </a>
+            </div>
+            <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+            <span class="overlay"></span>
+            <nav class="navbar" id="navbar">
+                <ul class="menu" id="menu">
+                    <li class="menu-item"><a href="#" class="menu-link">Ưu đãi</a></li>
+                    <li class="menu-item menu-dropdown">
+                        <span class="menu-link" data-toggle="submenu">Dịch vụ
+                            <i class="fa-solid fa-caret-down"></i>
+                        </span>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#" class="submenu-link">Giới thiệu</a></li>
+                            <li class="submenu-item"><a href="#" class="submenu-link">Đội ngũ bác sĩ</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#" class="menu-link">Giới thiệu</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Đội ngũ bác sĩ</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Bảng giá</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Thư viện</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Liên hệ</a></li>
+                    <li class="menu-item">
+                        <button class="btn-sl px-8 py-3">
+                            <i class="fa-sharp fa-solid fa-phone pr-2"></i>
+                            <a href="#!">Liên hệ ngay</a>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <img src="./img/banner-1.png" alt="" class="z-20">
+        </section>
+        <section class="circle py-[88px]">
+            <div class="layout-container">
+                <div class="flex h-[442px]">
+                    <div class="max-w-[448px]">
+                        <h3 class="font-medium text-4xl pb-4">Chương trình ưu đãi:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit lis iaculis ac felis porta. Vulputate
+                            tellus sapien pat sit ipsum molestie pharetran da volutpat semper.</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-x-8 h-auto">
+                        <div class="relative">
+                            <div>
+                                <img src="./img/Rectangle-1.png" alt="">
+                            </div>
+                            <div class="box-sha">
+                                <h3 class="font-medium text-[32px] leading-[40px] text-gra pb-2">Ưu đãi 50%</h3>
+                                <p class="font-medium text-[22px] leading-[28px] pb-2">Gói khám thai tổng quát</p>
+                                <p class="pb-4">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.
+                                </p>
+                                <button class="btn">
+                                    <a href="#!">Đăng ký nhận ưu đãi</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div>
+                                <img src="./img/Rectangle-1.png" alt="">
+                            </div>
+                            <div class="box-sha">
+                                <h3 class="font-medium text-[32px] leading-[40px] text-gra pb-2">Ưu đãi 50%</h3>
+                                <p class="font-medium text-[22px] leading-[28px] pb-2">Gói khám thai tổng quát</p>
+                                <p class="pb-4">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.
+                                </p>
+                                <button class="btn">
+                                    <a href="#!">Đăng ký nhận ưu đãi</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div>
+                                <img src="./img/Rectangle-1.png" alt="">
+                            </div>
+                            <div class="box-sha">
+                                <h3 class="font-medium text-[32px] leading-[40px] text-gra pb-2">Ưu đãi 50%</h3>
+                                <p class="font-medium text-[22px] leading-[28px] pb-2">Gói khám thai tổng quát</p>
+                                <p class="pb-4">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.
+                                </p>
+                                <button class="btn">
+                                    <a href="#!">Đăng ký nhận ưu đãi</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pb-[88px] relative cricle-after">
+            <div class="layout-container">
+                <div class="flex items-center gap-x-8">
+                    <div class="w-auto">
+                        <img src="./img/Rectangle-2.png" alt="">
+                    </div>
+                    <div class="max-w-[668px]">
+                        <h3 class="text-4xl font-medium pb-4">Dịch vụ thai sản trọn gói</h3>
+                        <p class="pb-4">Mang thai và sinh nở là một hành trình vô cùng kỳ diệu nhưng cũng lắm mệt mỏi,
+                            áp lực, thậm
+                            chí là nguy hiểm. Thấu hiểu nỗi niềm đó, dịch vụ thai sản trọn gói Phương Đông nhằm mang tới
+                            trải nghiệm nhẹ nhàng, an tâm cho người mẹ trong suốt thai kỳ, ngày vượt cạn đến sau sinh và
+                            sự chăm sóc toàn diện với em bé ngay từ giây phút đầu tiên chào đời.</p>
+                        <span>
+                            <p class="list-disc">Đội ngũ bác sĩ sản khoa giàu kinh nghiệm</p>
+                            <p class="list-disc">Chăm sóc mẹ và bé toàn diện trước trong và sau sinh</p>
+                            <p class="list-disc">Không gian đẳng cấp với trang thiết bị y tế hiện đại</p>
+                            <p class="list-disc">Đi sinh sung sướng như đi nghỉ dưỡng</p>
+                            <p class="list-disc">Con yêu chào đời với những điều kiện tốt nhất</p>
+                            <p class="list-disc">Thanh toán đồng thời bảo hiểm Y tế, bảo hiểm bảo lãnh</p>
+                            <p class="list-disc">Bảng giá các gói sinh tại Bệnh viện Phương Đông</p>
+                        </span>
+                        <button class="btn-sl px-8 py-3">
+                            <a href="#!">Liên hệ</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sc-gradiant py-[80px] ">
+            <div class="layout-container bg-[#fff] pt-10 pb-8">
+                <div class="flex items-center">
+                    <div>
+                        <img src="./img/Logo-1.png" alt="">
+                    </div>
+                    <div class="m-auto">
+                        <h3 class="text-4xl font-medium pb-[10px]">Bảng giá các dịch vụ khám và chữa bệnh:</h3>
+                        <p class="pb-[10px] text-[#888888] text-center">Ghi chú: Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit lis iaculis ac felis</p>
+                    </div>
+                </div>
+                <table>
+                    <thead class="text-[#fff] font-medium">
+                        <tr>
+                            <th rowspan="2" class="text-center">STT</th>
+                            <th rowspan="2" class="text-center">TÊN DỊCH VỤ</th>
+                            <th colspan="2" class="text-center">GIÁ DỊCH VỤ DÀNH CHO KHÁCH HÀNG CÓ QUỐC TỊCH</th>
+                        </tr>
+                        <tr>
+                            <th style="display:none"></th>
+                            <th class="text-center">Việt Nam</th>
+                            <th class="text-center">Nước ngoài</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="scrollBox" style="width:100%; height:520px;">
+                        <tr>
+                            <td>1</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
+                            <td>200,000/giờ</td>
+                            <td>400,000/giờ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="layout flex items-center py-3 text-[#fff] foot-table justify-evenly">
+                <div class="flex items-center">
+                    <i class="fa-sharp fa-solid fa-phone"></i>
+                    <p class="ml-[6px]"><a href="#!">Hotline: 1900 1806</a></p>
+                </div>
+                <div class="flex items-center">
+                    <i class="fa-solid fa-globe"></i>
+                    <p class="ml-[6px]"><a href="#!">https://benhvienphuong dong.vn/</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-[88px] pb-[236px] relative cricle-after-1">
+            <div class="flex items-center">
+                <div class="relative">
+                    <img src="./img/Rectangle-3.png" alt="">
+                </div>
+                <div class="max-w-[599px] bg-[#fff] shadow absolute right-[75px] rounded-t-[40px] rounded-br-[40px]">
+                    <div class="p-[56px]">
+                        <h3 class="text-3xl pb-4 font-medium">Bệnh viên Phương Đông tiên phong
+                            trong dịch vụ thai sản trọn gói</h3>
+                        <p class="pb-10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tale tincidunt
+                            tortor
+                            lobortis pretium nulla quis sem nullam rhoncus. Ornare et dui sit massa. Volutpat porta
+                            leo
+                            pulvinar adipiscing gestas metus
+                        </p>
+                        <button class="btn-sl px-8 py-3">
+                            <a href="#!">Đăng ký tư vấn</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="layout-container">
+                <div class="flex items-center justify-between pb-11">
+                    <div>
+                        <h3 class="text-4xl font-medium">Hình ảnh về cơ sở vật chất, trang thiết bị</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="system-slider">
+                <div class="image-item">
+                    <div class="image">
+                        <img src="./img/Rectangle-7.png" alt="">
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="image">
+                        <img src="./img/Rectangle-7.png" alt="">
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="image">
+                        <img src="./img/Rectangle-7.png" alt="">
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="image">
+                        <img src="./img/Rectangle-7.png" alt="">
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="image">
+                        <img src="./img/Rectangle-7.png" alt="">
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="image">
+                        <img src="./img/Rectangle-7.png" alt="">
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="image">
+                        <img src="./img/Rectangle-7.png" alt="">
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="image">
+                        <img src="./img/Rectangle-7.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-[88px]">
+            <div class="layout-container">
+                <div class="flex items-center pb-10 justify-between">
+                    <div>
+                        <h3 class="text-4xl font-medium">Đội ngũ bác sĩ bệnh viện đa khoa Phương Đông</h3>
+                    </div>
+                    <div>
+                        <button class="btn-sl px-8 py-3">
+                            <a href="#!">Tìm bác sĩ</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-x-12 pb-8">
+                    <div class="flex items-center relative">
+                        <div>
+                            <img src="./img/avatar.png" alt="">
+                        </div>
+                        <div class="pl-4">
+                            <h3 class="text-[22px] leading-[28px] pb-2">BS: NGUYỄN TRUNG CHÍNH</h3>
+                            <p>PGS.TS. Bác sĩ Ung bướu - Giám đốc Bệnh viện Đa khoa Phương Đông</p>
+                            <p>Kinh nghiệm: 20 năm</p>
+                            <div class="flex items-center">
+                                <p>Xếp hạng:</p>
+                                <span class="text-[#FFC700] pl-2">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center relative">
+                        <div>
+                            <img src="./img/avatar.png" alt="">
+                        </div>
+                        <div class="pl-4">
+                            <h3 class="text-[22px] leading-[28px] pb-2">BS: NGUYỄN TRUNG CHÍNH</h3>
+                            <p>PGS.TS. Bác sĩ Ung bướu - Giám đốc Bệnh viện Đa khoa Phương Đông</p>
+                            <p>Kinh nghiệm: 20 năm</p>
+                            <div class="flex items-center">
+                                <p>Xếp hạng:</p>
+                                <span class="text-[#FFC700] pl-2">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-x-12">
+                    <div class="flex items-center relative">
+                        <div class="pr-4">
+                            <h3 class="text-[22px] leading-[28px] pb-2">BS: NGUYỄN TRUNG CHÍNH</h3>
+                            <p>PGS.TS. Bác sĩ Ung bướu - Giám đốc Bệnh viện Đa khoa Phương Đông</p>
+                            <p>Kinh nghiệm: 20 năm</p>
+                            <div class="flex items-center">
+                                <p>Xếp hạng:</p>
+                                <span class="text-[#FFC700] pl-2">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./img/avatar.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex items-center relative">
+                        <div class="pr-4">
+                            <h3 class="text-[22px] leading-[28px] pb-2">BS: NGUYỄN TRUNG CHÍNH</h3>
+                            <p>PGS.TS. Bác sĩ Ung bướu - Giám đốc Bệnh viện Đa khoa Phương Đông</p>
+                            <p>Kinh nghiệm: 20 năm</p>
+                            <div class="flex items-center">
+                                <p>Xếp hạng:</p>
+                                <span class="text-[#FFC700] pl-2">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./img/avatar.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-[88px] relative cricle-after-3">
+            <div class="layout-container">
+                <div class="grid grid-cols-2">
+                    <div>
+                        <img src="./img/Rectangle-5.png" alt="">
+                        <div class="mr-10">
+                            <h3 class="text-4xl font-medium pb-4 pt-9">Dấu hiệu nhận biết chuyển dạ và sinh non:</h3>
+                            <p class="text-[#454545] pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sapien,
+                                nec morbi mauris, turpis
+                                fringilla condimentum urna sagittis estellus etiam nisl pretium</p>
+                            <p class="text-[#454545] pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sapien,
+                                nec morbi mauris, turpis
+                                fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa.
+                                Tellus
+                                etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor,
+                                convallis
+                                dolor. Et, dignissim amet sed orci at amet id nulla mauris.</p>
+                            <p class="text-[#454545]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Amet,
+                                odio in turpis nunc mollis
+                                diam
+                                viverra dictum. Tortor sed sapien ut tellus. Nunc etiam consectetur consectetur amet
+                                taranlete
+                                pellentesque varius vel donec. Malesuada morbi nisl cras turpis pretium. Habitant
+                                facilisis
+                                malesuada suscipit mus</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="ml-10">
+                            <h3 class="text-4xl font-medium pb-6">Chuyển dạ và sinh non có nguy hiểm?</h3>
+                            <p class="text-lg font-medium pb-2">Tính nguy hiểm của bệnh</p>
+                            <p class="text-[#454545] pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sapien,
+                                nec morbi mauris, turpis
+                                fringilla condimentum urna sagittis estellus etiam nisl pretium</p>
+                            <p class="text-4xl font-medium pb-6">Các cấp độ</p>
+                            <p class="text-[#454545] pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sapien,
+                                nec morbi mauris, turpis
+                                fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa.
+                                Tellus
+                                etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor,
+                                convallis
+                                dolor. Et, dignissim amet sed orci at amet id nulla mauris.</p>
+                            <p class="text-lg font-medium pb-2">Giải pháp</p>
+                            <p class="text-[#454545] pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Sapien,
+                                nec morbi mauris, turpis
+                                fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus</p>
+                        </div>
+                        <img src="./img/Rectangle-6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-[88px] relative cricle-after-2">
+            <div class="layout-container">
+                <div class="flex items-center gap-x-8">
+                    <div>
+                        <iframe width="688" height="388" src="https://www.youtube.com/embed/lCUrwiHLksI"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h3 class="text-4xl font-medium pb-6">Giải pháp an toàn hãy lựa chọn dịch vụ thai sản trọn gói
+                            tại bệnh viện Phương Đông</h3>
+                        <p class="text-[#454545] pb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                            ut risus luctus donec Lorem
+                            malesuada scelerisque euismod ullamcorper ac lacus aliquet quisque. Pulvinar aenean fusce
+                            pulvinar elementum odio dolor lorem aenean quis. Ridiculus mattis.</p>
+                        <button class="btn-sl px-8 py-3">
+                            <i class="fa-sharp fa-solid fa-phone pr-2"></i>
+                            <a href="#!">Liên hệ ngay</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-[88px]">
+            <div class="layout-container">
+                <div class="flex items-center">
+                    <div>
+                        <h3 class="font-medium text-4xl pb-6">Tại sao bạn nên chọn gói dịch vụ thai sản tại bệnh viện
+                            Phương Đông</h3>
+                        <p class="pb-4 text-[#454545]">Khám định kỳ với Bác sĩ sản khoa.</p>
+                        <p class="font-medium text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Consequat risus </p>
+                        <p class="font-medium text-lg">Chăm sóc thai kỳ cùng bác sĩ Sản khoa hàng đầuKhám định kỳ với
+                            Bác sĩ sản khoa.</p>
+                        <p class="pb-4 text-[#454545]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Consequat risus </p>
+                        <p class="font-medium text-lg">Ekip đón bé chuyên môn cao, có khả năng xử lý nhiều ca khó</p>
+                        <p class="pb-4 text-[#454545]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Consequat risus </p>
+                        <p class="font-medium text-lg">Chăm lo cho mẹ và bé chu đáo - Cả nhà nhàn tênh</p>
+                        <p class="pb-10 text-[#454545]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Consequat risus </p>
+                        <button class="btn-sl px-8 py-3">
+                            <i class="fa-sharp fa-solid fa-phone pr-2"></i>
+                            <a href="#!">Liên hệ ngay</a>
+                        </button>
+                    </div>
+                    <div>
+                        <img src="./img/Group-9.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pb-[48px] pt-[88px]">
+            <div class="layout-container">
+                <div class="layout-container text-center">
+                    <h3 class="text-4xl font-medium pb-4">Hậu quả chuyển dạ và sinh non nếu không điều trị kịp thời</h3>
+                    <p class="pb-10 max-w-[879px] m-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+                        odio in turpis nunc
+                        mollis diam
+                        viverra dictum. Tortor sed sapien ut tellus. Nunc etiam consectetur consectetur amet Habitant
+                        facilisis malesuada suscipit mus</p>
+                </div>
+                <div class="grid grid-cols-4">
+                    <div>
+                        <img src="./img/Group.png" alt="">
+                        <h3>Gây sảy thai</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis
+                            fringilla condimentum urna sagittis </p>
+                    </div>
+                    <div class="pt-[205px]">
+                        <img src="./img/Group-1.png" alt="">
+                        <h3>Sinh sản gặp khó khăn</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis
+                            fringilla condimentum urna sagittis </p>
+                    </div>
+                    <div>
+                        <img src="./img/Group-3.png" alt="">
+                        <h3>Nguy hiểm cho cả hai mẹ con</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis
+                            fringilla condimentum urna sagittis </p>
+                    </div>
+                    <div class="pt-[205px]">
+                        <img src="./img/Group-4.png" alt="">
+                        <h3>Gây mất khả năng sinh sản</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis
+                            fringilla condimentum urna sagittis </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="pt-[117px] pb-8">
+            <div class="layout-container">
+                <div class="grid grid-cols-4 gap-x-[30px] text-[#fff]">
+                    <div>
+                        <a href="#!">
+                            <img src="./img/Logo-footer.png" alt="">
+                        </a>
+                        <h3 class="font-medium text-lg pt-6 pb-2 uppercase">Bệnh viên đa khoa phương đông</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna sit morbi nisl contale
+                            consectetur
+                            pellentesque ullamcorper con viverra id cursus hendreritenim ultricies</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-medium pb-6">Thông tin liên hệ</h3>
+                        <p class="pb-3">Địa chỉ: Số 9, Phố Viên, Cổ Nhuế 2, Bắc Từ Liêm, Hà Nội</p>
+                        <p class="pb-3"><a href="#!">
+                                bvphuongdong@phuongdonghospital.vn
+                            </a></p>
+                        <p class="pb-3"><a href="#!">info.benhvienphuongdong@gmail.com</a></p>
+                        <p>Tổng đài tư vấn: <a href="#!">19001806</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-medium pb-6">Giờ làm việc</h3>
+                        <p class="pb-3">Từ 7:00 - 19:00 từ Thứ 2 đến CN</p>
+                        <p class="pb-3">Cấp cứu 24/7: <a href="0833015115">0833 015 115</a></p>
+                        <p class="pb-3">Hotline Tiêm chủng: <a href="0911615115">0911 615 115</a></p>
+                        <p>Hotline Hỗ trợ khách hàng: <a href="19001806">1900 1806</a></p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-medium pb-6">Theo dõi chúng tôi</h3>
+                        <img src="./img/thong-bao-website-voi-bo-cong-thuong_grande_waifu2x_photo_noise3_scale_tta_1 1.png"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-6 text-center border-t-[1px] text-[#fff]">
+            <p>© Copyright 2022 Bệnh Viện Đa khoa Phương Đông. All rights reserved</p>
+        </div>
+    </footer>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="./js/slide.js"></script>
+<script src="./js/script.js"></script>
+
 </html>
