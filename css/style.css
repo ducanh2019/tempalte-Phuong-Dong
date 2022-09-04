@@ -4,7 +4,7 @@
 .circle::after {
   position: absolute;
   content: "";
-  border: 80px solid #2DBEFC1A;
+  border: 80px solid #2dbefc1a;
   border-radius: 50%;
   width: 672px;
   height: 672px;
@@ -13,10 +13,10 @@
   z-index: -1;
 }
 .btn-sl {
-    border: 1px solid #e57709;
-    background: linear-gradient(180deg, #ffb469 0%, #e57709 100%);
-    color: white;
-    border-radius: 99px;
+  border: 1px solid #e57709;
+  background: linear-gradient(180deg, #ffb469 0%, #e57709 100%);
+  color: white;
+  border-radius: 99px;
 }
 .btn {
   border: 1px solid #e57709;
@@ -45,8 +45,8 @@
 }
 
 footer {
-    background: linear-gradient(90deg, #1CAB55 0%, #04A4EC 100%);
-    clip-path: ellipse(100% 100% at bottom center);
+  background: linear-gradient(90deg, #1cab55 0%, #04a4ec 100%);
+  clip-path: ellipse(100% 100% at bottom center);
 }
 
 /* slide */
@@ -90,40 +90,15 @@ footer {
   line-height: 1;
   z-index: 5;
   transition: all 0.2s linear;
-  background: linear-gradient(180deg, #FFB469 0%, #E57709 100%);
-  color: white
+  background: linear-gradient(180deg, #ffb469 0%, #e57709 100%);
+  color: white;
 }
 
 .prev-arrow {
   left: 88%;
-  background: linear-gradient(180deg, #FFB469 0%, #E57709 100%);
+  background: linear-gradient(180deg, #ffb469 0%, #e57709 100%);
 }
 
-.slick-dots {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  /* gap: 0 10px; */
-}
-.slick-dots button {
-  font-size: 0;
-  width: 5px;
-  height: 5px;
-  /* border-radius: 100rem; */
-  background-color: #eee;
-  border: none;
-  outline: none;
-  transition: all 0.2s linear;
-  width: 50px;
-}
-.slick-dots .slick-active button {
-  background: linear-gradient(90deg, #fbc82e 0%, #dd7e27 100%);
-  width: 50px;
-}
 .slick-slide {
   opacity: 10;
 }
@@ -197,15 +172,6 @@ footer {
   line-height: 50px;
   color: #fff;
 }
-.load-more::after {
-  content: "\f178";
-  font-family: FontAwesome;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 10px;
-  margin-left: 5px;
-  color: #face00;
-}
 #button:hover {
   cursor: pointer;
   background-color: #333;
@@ -223,20 +189,20 @@ footer {
     margin: 30px;
   }
 }
-
+/* table */
 table {
   border-collapse: collapse;
   width: 100%;
 }
 .scrollBox {
   position: relative;
-  width:400px;
-  height:520px;
+  width: 400px;
+  height: 520px;
   overflow: scroll;
   border: 1px solid silver;
 }
 thead {
-  background: linear-gradient(90deg, #50C577 0%, #2DBEFC 100%);
+  background: linear-gradient(90deg, #50c577 0%, #2dbefc 100%);
 }
 
 tbody td {
@@ -246,6 +212,57 @@ tbody td {
   color: #888888;
 }
 .foot-table {
-  background: linear-gradient(90deg, #50C577 0%, #2DBEFC 100%);
+  background: linear-gradient(90deg, #50c577 0%, #2dbefc 100%);
   border-radius: 0px 0px 24px 24px;
+}
+.slick-list {
+  height: 100%;
+}
+.slide-prev {
+  position: absolute;
+  border-radius: 99px;
+  top: -10%;
+  right: 101px;
+  transform: translateY(-50%);
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 5;
+  transition: all 0.2s linear;
+  background: linear-gradient(180deg, #ffb469 0%, #e57709 100%);
+  color: white;
+}
+.prev-arr {
+  left: 82%;
+  background: linear-gradient(180deg, #ffb469 0%, #e57709 100%);
+}
+.disc li{
+  list-style: none;
+}
+.disc li::before {
+  content: "";
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #73D090 0%, #C4EACE 0.01%, #53CAFB 100%);
+  font-weight: bold;
+  display: inline-block; 
+  width: 12px;
+  margin-right: 8px;
+  
+}
+
+@media (max-width: 427px) {
+    footer {
+      clip-path: ellipse(200% 100% at bottom center);
+    }
+    .circle::after {
+      border: 40px solid #2dbefc1a;
+      width: 250px;
+      height: 250px;
+    }
 }
