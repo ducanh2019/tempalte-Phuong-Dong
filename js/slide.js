@@ -49,7 +49,7 @@ $(document).ready(function () {
         draggable: true,
         // arrows: true,
         prevArrow: '<button class="slide-prev prev-arr"><i class="fa-solid fa-chevron-left"></i></button>',
-        nextArrow: '<button class="slide-prev next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
+        nextArrow: '<button class="slide-prev next-arr"><i class="fa-solid fa-chevron-right"></i></button>',
         dots: false,
         responsive: [
             {
