@@ -1,88 +1,75 @@
-$(document).ready(function () {
-    $(".system-slider").slick({
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        draggable: true,
-        // arrows: true,
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4
-                },
-            }, {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
-            {
-                breakpoint: 475,
-                settings: {
-                    slidesToShow: 1,
-                    arrows: false,
-                    infinite: false,
-                },
-            },
-            {
-                breakpoint: 300,
-                settings: {
-                    slidesToShow: 1,
-                    arrows: false,
-                    infinite: false,
-                },
-            },
-        ],
-        autoplay: true,
-        autoplaySpeed: 5000,
-    });
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 6,
+  spaceBetween: 24,
+  navigation: {
+    nextEl: ".next-arrow ",
+    prevEl: ".prev-arrow ",
+  },
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },
+    1024: {
+      slidesPerView: 6,
+      spaceBetween: 24
+    }
+  }
 });
-//------------------------------//
-$(document).ready(function () {
-    $(".bot-slider").slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        draggable: true,
-        // arrows: true,
-        prevArrow: '<button class="slide-prev prev-arr"><i class="fa-solid fa-chevron-left"></i></button>',
-        nextArrow: '<button class="slide-prev next-arr"><i class="fa-solid fa-chevron-right"></i></button>',
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                },
-            }, {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                },
-            },
-            {
-                breakpoint: 475,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false
-                },
-            },
-            {
-                breakpoint: 300,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false
-                },
-            },
-        ],
-        autoplay: true,
-        autoplaySpeed: 5000,
-    });
+const swipers = new Swiper('.fSwiper', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  autoHeight: true,
+  navigation: {
+    nextEl: ".next-arr ",
+    prevEl: ".prev-arr ",
+  }, autoplay: {
+    delay: 5000,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    }
+  }
+});
+const sw = new Swiper(".mSwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  autoHeight: true,
+  autoplay: {
+    delay: 5000,
+  },
+
 });
