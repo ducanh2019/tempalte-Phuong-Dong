@@ -1,14 +1,16 @@
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 6,
-  spaceBetween: 24,
+  slidesPerView: 4,
+  spaceBetween: 0,
   navigation: {
     nextEl: ".next-arrow ",
     prevEl: ".prev-arrow ",
   },
+  freeMode: true,
   loop: true,
-  autoplay: {
-    delay: 5000,
-  },
+  autoHeight: true,
+  // autoplay: {
+  //   delay: 5000,
+  // },
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -26,8 +28,8 @@ const swiper = new Swiper(".mySwiper", {
       spaceBetween: 40
     },
     1024: {
-      slidesPerView: 6,
-      spaceBetween: 24
+      slidesPerView: 4,
+      spaceBetween: 0
     }
   }
 });
@@ -68,8 +70,8 @@ const sw = new Swiper(".mSwiper", {
     el: ".swiper-pagination",
   },
   autoHeight: true,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
 
 });

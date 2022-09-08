@@ -7,6 +7,7 @@ module.exports = {
     backgroundImage :{
       'circle' : 'url(../img/Ellipse-2.png)'
     },
+
     extend: {},
   },
   plugins: [],

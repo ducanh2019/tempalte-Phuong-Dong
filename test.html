@@ -6,6 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .grid {
+            max-width: 600px;
+            margin: auto;
+            counter-reset: num;
+        }
+
+        .grid * {
+            border: 2px solid;
+            font-size: 30px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            display: grid;
+            place-content: center;
+        }
+
+        .grid *:before {
+            content: counter(num);
+            counter-increment: num;
+        }
+
+        .grid {
+            display: grid;
+            grid-auto-columns: 1fr;
+            /* all the columns are equal */
+            grid-auto-rows: 100px;
+            /* all the rows are equal to 100px */
+        }
+
+        .grid :nth-child(4n + 1) {
+            grid-column: span 2;
+        }
+
+        .grid :nth-child(4n + 4) {
+            grid-column: 2/span 2;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,8 +53,12 @@
                 alt="An toàn cho trẻ em, hạnh phúc của mọi nhà" class="img-fluid img-responsive lazyloaded"></a>
         <h3 class="title text-center">An toàn cho trẻ em, hạnh phúc của mọi nhà</h3>
     </div> -->
-    <div class="video_add">
-        <embed src="" type="" data-link="">
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -27,29 +68,29 @@
 
 
 
-function youtubeParser(url) {
-    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-    var match = url.match(regExp);
-    return (match && match[7].length == 11) ? match[7] : false;
-}
+    function youtubeParser(url) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        return (match && match[7].length == 11) ? match[7] : false;
+    }
 
 
-console.log(youtubeParser('https://www.youtube.com/embed/jrTMMG0zJyI'))
-var $ = document.querySelectorAll('.video_add')
+    console.log(youtubeParser('https://www.youtube.com/embed/jrTMMG0zJyI'))
+    var $ = document.querySelectorAll('.video_add')
 
-console.log($);
+    console.log($);
 
-var playYoutube = function() {
-    if ($.length == 0) return;
-    $.click(function(event) {
-        event.preventDefault();
-        var html = '<iframe width="100%" height="320" src="https://www.youtube.com/embed/' + youtubeParser($(this).attr('data-link')) + '?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-        $(this).html(html);
-        console.log(hmtl)
-    });
-}
+    var playYoutube = function () {
+        if ($.length == 0) return;
+        $.click(function (event) {
+            event.preventDefault();
+            var html = '<iframe width="100%" height="320" src="https://www.youtube.com/embed/' + youtubeParser($(this).attr('data-link')) + '?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            $(this).html(html);
+            console.log(hmtl)
+        });
+    }
 
-console.log(">>>>", playYoutube);
+    console.log(">>>>", playYoutube);
 </script>
 
 </html>

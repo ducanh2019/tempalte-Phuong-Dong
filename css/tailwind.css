@@ -21,38 +21,43 @@
 
 @layer components {
   .layout-container {
-    max-width: 1400px;
+    max-width: 1408px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: auto;
+    padding-left: auto;
+  }
+  .layout {
+    max-width: 1408px;
     margin-left: auto;
     margin-right: auto;
     padding-right: 15px;
     padding-left: 15px;
   }
-  .layout {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 0;
-    padding-left: 0;
-  }
+
 }
+
 
 @layer utilities {
   .box-sha {
     @apply shadow-lg shadow-gray-200 px-4 py-6 text-center absolute top-[75%] bg-[#fff] rounded-t-[40px] rounded-br-[40px];
   }
   .cricle-after {
-    @apply after:absolute after:content-[''] after:rounded-full after:border-[#2DBEFC0F] after:border-[40px] md:after:border-[80px] after:top-[46%] after:left-[-18%] after:w-[350px] md:after:w-[778px] after:h-[350px] md:after:h-[778px] after:z-[-1];
+    @apply after:absolute after:content-[''] after:rounded-full after:border-[#2DBEFC0F] after:border-[40px] md:after:border-[100px] after:top-[33%] after:left-[-30%] after:w-[350px] md:after:w-[778px] after:h-[350px] md:after:h-[778px] after:z-[-1];
   }
   .cricle-after-1 {
-    @apply after:absolute after:content-[''] after:rounded-full after:border-[#2DBEFC0F] after:border-[80px] after:top-[34%] after:right-[12%] after:w-[604px] after:h-[604px] after:z-[-1];
+    @apply after:absolute after:content-[''] after:rounded-full after:border-[#2DBEFC0F] after:border-[100px] after:top-[39%] after:right-[17.5%] after:w-[604px] after:h-[604px] after:z-[-1];
   }
   .cricle-after-2 {
-    @apply after:absolute after:content-[''] after:rounded-full after:border-[#2DBEFC0F] after:border-[40px] md:after:border-[80px] after:top-[0] md:after:top-[-17%] after:right-[24%] after:w-[350px] md:after:w-[778px] after:h-[350px] md:after:h-[778px] after:z-[-1];
+    @apply after:absolute after:content-[''] after:rounded-full after:border-[#2DBEFC0F] after:border-[40px] md:after:border-[100px] after:top-[0] md:after:top-[9%] after:right-[13%] after:w-[350px] md:after:w-[778px] after:h-[350px] md:after:h-[778px] after:z-[-1];
   }
   .cricle-after-3 {
     @apply after:absolute after:content-[''] after:rounded-full after:border-[#2DBEFC0F] after:border-[40px] md:after:border-[80px] after:bottom-[0] after:left-[-20%] after:w-[350px] md:after:w-[507px] after:h-[350px] md:after:h-[507px] after:z-[-1];
-    @apply before:absolute before:content-[''] before:rounded-full before:border-[#2DBEFC0F] before:border-[40px] md:before:border-[80px] before:top-[0] before:right-[0] before:w-[504px] md:before:w-[704px] before:h-[504px] md:before:h-[704px] before:z-[-1];
+    /* @apply before:absolute before:content-[''] before:rounded-full before:border-[#2DBEFC0F] before:border-[40px] md:before:border-[80px] before:top-[0] before:right-[0] before:w-[504px] md:before:w-[704px] before:h-[504px] md:before:h-[704px] before:z-[-1]; */
+    @apply bg-[url('../img/circle-2.png')] bg-no-repeat bg-right-top
   }
+
+
   .border-table {
     @apply border-[#dddddd] border-[1px] border-solid text-xs md:text-base
   }
